@@ -1,0 +1,171 @@
+Gitbash commands: 
+
+    git add - A, or git add .
+    git commit -m "message about what last changes were"
+    git push origin main (pushes file to github cloud)
+    git clone - clones github repo to local folder
+    git pull - pulls from a non-local repo into a local folder
+
+    git branch displays a list of all the branches in the repo and highlights the branch you're in, which is called the active branch or working directory.
+    git branch <branch-name> creates a new branch (replace <branch-name> with the name you want to give the branch) that is a copy of the current active branch. 
+        Note that after you commit changes to the new branch, the commit history of these two branches will diverge, and the branches will no longer be in sync with each other.
+    git checkout <branch-name> lets you navigate among different versions (branches) of the codebase by switching into a new active branch.
+    git checkout -b <branch-name> combines the previous two commands by creating a new branch (git branch <branch-name>) 
+        AND moving you into that branch (git checkout <branch-name>) all at once!
+
+    The 'git fetch' command updates the local repo with any changes in the remote repo since the last fetch command. 
+        A use case for git fetch would be to look at a team member's feature branch for a review process or to help find a bug.
+    The 'git merge' operation, on the other hand, updates the active branch with changes from the target branch, 
+        which is the branch that contains the changes we need to add.
+
+    If you can't switch branches due to uncommitted work or you simply want to discard changes that don't need to be staged in Git, 
+    you can use the command git checkout -- <path/to/file> to reset individual files. For example, git checkout -- index.html 
+    would reset index.html to its most recent commit.
+
+    mkdir <directory name> - create new folder/directory.
+    ls - print contents of folder/directory.
+    cd - move up one(back) folder/directory.
+    cd <filename> - move to that file
+    touch <filename> - creates new file
+    rm <filename> - removes an existing file in the current directory
+    cp <filename> <folder destination> - copy file into destination folder
+    rm -r <foldername> - remove folder and everything in it
+    code . - pull up all files in current directory
+    sudo (for mac)- overrides commands on a computer *DANGEROUS IF YOU DON'T KNOW WHAT YOUR DOING*
+
+
+/* CSS COMMANDS */
+
+    font-size: The size of the font in the element.
+
+    font-weight:a sets the font to lighter, normal, or bold; etc.
+    
+    color: sets the text color for the element. Applied directly to element.
+
+    float: The float property takes an element 
+    that wants to occupy 100% of its parent's width by default (known in CSS as a block element) 
+    and pushes everything that follows it below it, allowing other elements to come 
+    alongside of it or wrap around it (known in CSS as inline elements).
+
+    * = universal selector.
+
+    <br/> = line break. Creates a manual line break for inline code, such as <a> elements.
+
+    &copy; = creates copyright symbol.
+
+    line-height: The line-height 
+    property assigns how much vertical space should be between lines of text content.
+
+    text-align: The text-align property lets us align the text to the left, right, 
+    center, or justified. By default, it is left-aligned.
+
+    margin: # # # # = numbers are used clockwise; top, right, bottom, left.
+
+    overflow: (word) = allows the parent element to display its CSS properties by stretching its
+     dimensions to physically contain its child elements
+
+    float: will 'float' image in an element, allowing element content to wrap around it.
+
+    Clear: must corrispond with 'float' command.
+
+    flex-grow is a numeric value that helps determine how much of the flexbox's unused space can be distributed among its children. 
+    This number is used as a ratio, alongside the other child's flex-grow value. The higher the number, the more unused space that 
+    child element will be given.
+
+    flex-shrink helps determine how to size the flexbox's children when the flexbox container shrinks. 
+    Although this property can be handy, it isn't used as often as flex-grow.
+
+    flex-basis works similarly to setting a width value for a child element, but it acts as more of a baseline value that 
+    at the very least will let the child be that size no matter what—and grow or shrink accordingly.
+
+
+
+<!-- HTML COMMANDS -->
+
+    <a href="#(makes link that goes nowhere)">(DESCRIPTION OF LINK)</a> = link to outside source (link)
+
+    <article> = element to help encapsulate related content on the page,
+    allowing the browser and screen readers to have an easier time reading the content.
+
+    <iframe> = An <iframe>, which means inline frame, nests browsing content and embeds an HTML page into the current page.
+
+    <br /> = creates a line break in a series of text.
+
+    mailto: = The <a href="mailto:info@runbuddy.io"> element uses the mailto: prefix in the anchor tag's href attribute to instruct the browser 
+    to open the default mail client application upon clicking the link. Then it populates the address field with the email address in the href value.
+
+
+
+HTML:
+
+EXAMPLE LAYOUT
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Second HTML</title>
+ </head>
+ <body>
+    <header>
+        <h1> (h1-h7) </h1>
+    </header>
+    <main>
+        <section>
+            <h2>portfolio</h2>
+            <img src="https://placehold.it/50x50.png" alt="placeholder image">
+        </section>
+
+        <section>
+            <h2>Contact Info</h2>
+            <ul> (unordered list)
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </main>
+ </body>
+ </html>
+
+
+<!-- JAVASCRIPT COMMANDS -->
+
+Let's talk a little about objects, methods, and APIs. The 'window' is a collection of functions and many other properties built natively into 
+the browser. Whenever we open our program in the browser, our JavaScript file's code executes in the context of the window. This way, our code 
+can always access the tools and information (called "properties") the window provides.
+
+A collection of functionality and data that's accessed through one "name" (for example, window) is an object—which we'll learn more about 
+later when we create one. To access an object's data, we name the object, then use a period followed by the property name or function name 
+we're looking for. Using a period between the object name and property is called dot notation.
+
+So the window.prompt() instructs the browser to find the window object, then find and execute the prompt() function that belongs to the 
+window object. When a function like prompt() belongs to an object, it's called a method.
+
+Even though our JavaScript code can access these properties, the window object isn't actually part of the JavaScript language. 
+We can use it because browsers have built this functionality into their software and put it behind the name window. This is called a web 
+application programming interface (API), which we'll learn more about throughout this project and in the coming weeks.
+
+
+- var keyword: Just like function, var is a keyword built into the JavaScript language. 
+Whenever it is used, it tells the program that we are creating a new variable and the next word is going to be the name of the variable.
+
+- Variable name: This is the actual name that will store the information assigned to the variable. When the browser reads this line, 
+it will store this name to recall it later in the program. As a rule, give each variable a meaningful (but concise) name, 
+and use camel casing for more than one word. In camel casing, the first letter of a name is lowercase, but the first letter of every word 
+that follows is uppercase—which is useful because the JavaScript language can't interpret hyphens. We used camelCase to create our playerName 
+variable above, and there are more examples in the code below.
+
+Assignment operator: The assignment operator (=) is a single equal sign that is used to set the value to a variable name.
+ Everything on the left of the operator sets up the variable name for the program. Everything on the right of the operator is the value being 
+ stored into the variable name. This value can come in several forms, which are called data types. 
+
+ // This is a String data type; it must be wrapped in double quotes (" ") or single quotes (' ').
+var stringDataType = "This is a string, which is a fancy way to say text";
+
+// This is a Number data type; it can be an integer (whole number) or have decimals (floated numbers).
+var numberIntegerDataType = 10;
+var numberFloatDataType = 10.4;
+
+// This is a Boolean data type, which can only be given a value of true or false.
+var booleanDataType = true;
